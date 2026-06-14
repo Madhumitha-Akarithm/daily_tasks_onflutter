@@ -1,6 +1,7 @@
 import 'package:daily_tasks_onflutter/bmi_app/bmiApp.dart';
 import 'package:daily_tasks_onflutter/counter_app/counter_app_prj.dart';
 import 'package:daily_tasks_onflutter/ticketbooking/movieListPage.dart';
+import 'package:daily_tasks_onflutter/todo_list/HomeScreen.dart';
 import 'package:flutter/material.dart';
 import 'counter_app/counter_app_prj.dart';
 import 'followUnfollow/followingPage.dart';
@@ -156,6 +157,17 @@ class homeDrawer extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context)=>movieList()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.work),
+              title: Text("To do list"),
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=>HomeScrTodo()),
                 );
               },
             )
