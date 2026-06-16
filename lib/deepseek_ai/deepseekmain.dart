@@ -75,6 +75,7 @@ class _ChatScrState extends State<ChatScr> {
       appBar: AppBar(
         title: Text('chat with Deepseek'),
         centerTitle: true,
+        backgroundColor: Colors.blueAccent,
       ),
       body: SafeArea(
         child: Column(

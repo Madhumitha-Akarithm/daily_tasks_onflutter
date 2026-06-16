@@ -186,7 +186,7 @@ class homeDrawer extends StatelessWidget {
             ),
             ListTile(
               leading: Icon(Icons.computer_rounded),
-              title: Text("DeepSeek AI"),
+              title: Text("DeepSeek-AI"),
               onTap: (){
                 Navigator.pop(context);
                 Navigator.push(
