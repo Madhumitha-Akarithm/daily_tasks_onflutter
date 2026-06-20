@@ -3,6 +3,7 @@ import 'package:daily_tasks_onflutter/counter_app/counter_app_prj.dart';
 import 'package:daily_tasks_onflutter/deepseek_ai/deepseekmain.dart';
 import 'package:daily_tasks_onflutter/football_Score/HomeFootball.dart';
 import 'package:daily_tasks_onflutter/mobile_banking/bankHome.dart';
+import 'package:daily_tasks_onflutter/school_app/managementScr.dart';
 import 'package:daily_tasks_onflutter/ticketbooking/movieListPage.dart';
 import 'package:daily_tasks_onflutter/todo_list/HomeScreen.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,13 @@ class _homeDrawerState extends State<homeDrawer> {
               children: [
                 UserAccountsDrawerHeader(
                   accountName: const Text("Madhumitha",style: TextStyle(color: Colors.blueGrey),),
-                  accountEmail: const Text("madhumitha.s@akarithm.com", style: TextStyle(color: Colors.blueGrey),),
+                  accountEmail: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("madhumitha.s@akarithm.com", style: TextStyle(color: Colors.blueGrey),),
+                      Text("https://github.com/Madhumitha-Akarithm", style: TextStyle(color: Colors.blueGrey),)
+                    ],
+                  ),
                   currentAccountPicture: ClipOval(
                     child: Image.asset("lib/images/madhu pic.jpeg",
                     fit: BoxFit.contain,),
@@ -188,6 +195,15 @@ class _homeDrawerState extends State<homeDrawer> {
                     Navigator.pop(context);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => MainHomeScreen()));
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.school_rounded),
+                  title: const Text("School management "),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => SchoolManagementScreen()));
                   },
                 ),
 
