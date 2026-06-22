@@ -1,8 +1,10 @@
 import 'package:daily_tasks_onflutter/bmi_app/bmiApp.dart';
 import 'package:daily_tasks_onflutter/counter_app/counter_app_prj.dart';
 import 'package:daily_tasks_onflutter/deepseek_ai/deepseekmain.dart';
+import 'package:daily_tasks_onflutter/doctor_app/main.dart';
 import 'package:daily_tasks_onflutter/football_Score/HomeFootball.dart';
 import 'package:daily_tasks_onflutter/mobile_banking/bankHome.dart';
+import 'package:daily_tasks_onflutter/plant_app/plant_home_scr.dart';
 import 'package:daily_tasks_onflutter/school_app/managementScr.dart';
 import 'package:daily_tasks_onflutter/ticketbooking/movieListPage.dart';
 import 'package:daily_tasks_onflutter/todo_list/HomeScreen.dart';
@@ -204,6 +206,24 @@ class _homeDrawerState extends State<homeDrawer> {
                     Navigator.pop(context);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => SchoolManagementScreen()));
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.account_tree),
+                  title: const Text("Plant app"),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => PlantsHomeScreen()));
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.local_hospital_rounded),
+                  title: const Text("Doctor appointment "),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => MainPageDoctor()));
                   },
                 ),
 
