@@ -1,4 +1,6 @@
 import 'package:daily_tasks_onflutter/bmi_app/bmiApp.dart';
+import 'package:daily_tasks_onflutter/coffee_app/common_button.dart';
+import 'package:daily_tasks_onflutter/coffee_app/home_screen.dart';
 import 'package:daily_tasks_onflutter/counter_app/counter_app_prj.dart';
 import 'package:daily_tasks_onflutter/deepseek_ai/deepseekmain.dart';
 import 'package:daily_tasks_onflutter/doctor_app/main.dart';
@@ -224,6 +226,15 @@ class _homeDrawerState extends State<homeDrawer> {
                     Navigator.pop(context);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => MainPageDoctor()));
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.coffee_rounded),
+                  title: const Text("Coffee shop UI"),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => CoffeeAppHomeScreen()));
                   },
                 ),
 
